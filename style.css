@@ -1,0 +1,97 @@
+/* The original navy header, Arial typography, centered layout, and matching
+   footer remain. Shared variables give both pages consistent light/dark colors. */
+:root {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  --background: #f2f2f2;
+  --surface: #fff;
+  --text: #222;
+  --muted: #4f5d66;
+  --border: #d2dadd;
+  --accent: #234;
+  --tint: #e5edec;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+}
+body.dark-mode {
+  color-scheme: dark;
+  --background: #121c25;
+  --surface: #1c2a36;
+  --text: #f3f5f6;
+  --muted: #c0cdd5;
+  --border: #465966;
+  --accent: #b5ded5;
+  --tint: #243d40;
+}
+/* Respect the native hidden state, including accordion answers. */
+[hidden] { display: none !important; }
+a { color: var(--accent); text-underline-offset: 4px; }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid #b56822; outline-offset: 5px; }
+body.dark-mode :focus-visible { outline-color: #ffd395; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px max(24px, calc((100% - 1040px) / 2));
+  background: #234;
+  color: #fff;
+  box-shadow: 0 2px 5px #0003;
+}
+.brand { color: #fff; font-size: 22px; font-weight: 700; text-decoration: none; }
+.brand span { display: block; color: #d5e0e6; font-size: 12px; font-weight: 400; }
+nav { display: flex; flex-wrap: wrap; gap: 10px; }
+nav a { color: #fff; padding: 7px 10px; text-decoration: none; border-radius: 4px; }
+nav a[aria-current="page"] { background: #ffffff18; text-decoration: underline; }
+nav a:hover, nav a:focus-visible { color: #234; background: #fff; }
+.theme-toggle { padding: 9px 14px; color: #fff; border: 1px solid #aabcc8; border-radius: 6px; background: transparent; }
+.theme-toggle:hover { background: #ffffff18; }
+main { max-width: 1040px; margin: 0 auto; padding: 0 24px 64px; }
+.hero { padding: 70px 0 54px; max-width: 760px; }
+.hero.compact { padding-top: 50px; }
+.eyebrow { font-size: 12px; letter-spacing: 2px; font-weight: 700; color: var(--muted); }
+h1 { font-size: clamp(38px, 6vw, 66px); line-height: 1.08; letter-spacing: -2px; margin: 20px 0 24px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 12px 0 16px; }
+p { margin: 0 0 16px; }
+.intro { font-size: 19px; color: var(--muted); max-width: 600px; }
+.button-link { display: inline-block; background: #234; color: #fff; padding: 12px 20px; border-radius: 6px; text-decoration: none; margin-top: 8px; }
+.dark-mode .button-link { background: #b5ded5; color: #14252c; }
+.button-link:hover { text-decoration: underline; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+section { padding: 28px; margin-bottom: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; scroll-margin-top: 180px; }
+.feature { background: var(--tint); }
+.theme-status { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+.faq-item { border-top: 1px solid var(--border); }
+.faq h3 { margin: 0; font-size: 17px; }
+.faq-question { display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; padding: 20px 0; border: 0; background: transparent; color: var(--text); text-align: left; font-weight: 700; }
+.faq-question span { font-size: 24px; color: var(--accent); }
+.faq-question:disabled { cursor: default; opacity: 1; }
+.faq-item.active .faq-question { color: var(--accent); }
+.faq-answer { max-width: 760px; color: var(--muted); padding-bottom: 8px; }
+footer { background: #234; color: #fff; text-align: center; padding: 24px; font-size: 14px; }
+footer p { margin: 0; }
+footer span { margin: 0 12px; color: #c0cdd5; }
+.skip-link { position: fixed; top: -100px; left: 16px; padding: 12px; background: #fff; color: #234; z-index: 3; }
+.skip-link:focus { top: 10px; }
+/* Stacking cards and unpinning the header preserves room on small screens. */
+@media (max-width: 680px) {
+  header { position: static; padding: 18px 20px; gap: 16px; }
+  .brand { width: 100%; }
+  nav { gap: 0; }
+  nav a { padding-left: 0; padding-right: 16px; }
+  main { padding: 0 20px 32px; }
+  .hero, .hero.compact { padding: 40px 0 30px; }
+  .cards { grid-template-columns: 1fr; gap: 0; }
+  section { padding: 22px; }
+  h1 { letter-spacing: -1px; }
+}

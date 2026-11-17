@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My web development journey, from HTML and CSS to interactive JavaScript.">
+  <title>Home | My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <a class="brand" href="index.html">My Website<span>Learning, one page at a time.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="projects.html">Projects &amp; FAQ</a>
+    </nav>
+    <!-- Hidden until JavaScript is ready, so a disabled script leaves no dead button. -->
+    <button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark mode: off</button>
+  </header>
+  <main id="main">
+    <div class="hero">
+      <p class="eyebrow">A WEB DEVELOPMENT JOURNEY</p>
+      <h1>Small steps.<br>More possibilities.</h1>
+      <p class="intro">Exploring how structure, style, and interaction come together to make a website.</p>
+      <a class="button-link" href="projects.html">Explore my projects <span aria-hidden="true">↗</span></a>
+    </div>
+    <!-- The original Assignment 2 content is preserved in these two sections. -->
+    <div class="cards">
+      <section id="about" aria-labelledby="about-title">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2 id="about-title">About</h2>
+        <p>Welcome to my website. I am learning how to build web pages with HTML and CSS.</p>
+      </section>
+      <section id="projects" aria-labelledby="projects-title">
+        <p class="eyebrow">02 / THE FOUNDATION</p>
+        <h2 id="projects-title">Projects</h2>
+        <p>This assignment adds CSS to improve the layout and appearance of a web page.</p>
+        <a href="projects.html">See what comes next <span aria-hidden="true">→</span></a>
+      </section>
+    </div>
+    <section class="feature" aria-labelledby="feature-title">
+      <p class="eyebrow">03 / NOW INTERACTIVE</p>
+      <h2 id="feature-title">A new look, at the click of a button.</h2>
+      <p>Try the dark mode button at the top of either page. Your choice is remembered between pages when browser storage is available.</p>
+      <p class="theme-status" role="status">Light theme is active.</p>
+      <noscript><p>JavaScript is disabled. You can still read both pages and every FAQ answer in the light theme.</p></noscript>
+    </section>
+  </main>
+  <footer><p>My Website <span aria-hidden="true">/</span> Assignment 3 · HTML, CSS &amp; JavaScript</p></footer>
+</body>
+</html>

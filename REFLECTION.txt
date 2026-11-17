@@ -1,0 +1,7 @@
+Assignment 3 — Reflection and AI Disclosure
+
+This update adds a light/dark theme switcher and an interactive FAQ accordion to my website. The theme switcher gives visitors a choice of reading colors, while the accordion keeps the Projects page easy to scan. Both features use JavaScript to select DOM elements, listen for button clicks, toggle CSS classes, and update text or visibility. The theme choice is saved in localStorage when the browser permits it. The FAQ buttons also update aria-expanded so assistive technology can identify open answers.
+
+The website builds on the accessible local Assignment 2 files. It preserves the original About and Projects text, navy header and footer, and Arial typography, and adds a second styled page. The code separates HTML structure, CSS presentation, and JavaScript behavior, with comments explaining the important parts.
+
+AI disclosure: I used OpenAI Codex to help locate the earlier files, extend the layout, generate and comment the JavaScript, prepare this reflection, and check the result. AI was used to help implement the assignment requirements and explain how the DOM interactions work. This disclosure does not claim that I independently wrote or personally tested all of the generated code.

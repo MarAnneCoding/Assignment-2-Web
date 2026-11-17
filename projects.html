@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore my website projects and an interactive JavaScript FAQ.">
+  <title>Projects &amp; FAQ | My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <a class="brand" href="index.html">My Website<span>Learning, one page at a time.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects &amp; FAQ</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark mode: off</button>
+  </header>
+  <main id="main">
+    <div class="hero compact">
+      <p class="eyebrow">THE LEARNING NOTEBOOK</p>
+      <h1>From a page<br>to an experience.</h1>
+      <p class="intro">Each assignment adds another layer: content first, then design, and now interaction.</p>
+    </div>
+    <div class="cards">
+      <section aria-labelledby="foundation-title">
+        <p class="eyebrow">ASSIGNMENT 2</p>
+        <h2 id="foundation-title">Structure &amp; style</h2>
+        <p>The original website introduced About and Projects sections, a sticky header, navigation hover effects, and a matching footer.</p>
+        <a href="index.html#about">Visit the original content →</a>
+      </section>
+      <section aria-labelledby="interaction-title">
+        <p class="eyebrow">ASSIGNMENT 3</p>
+        <h2 id="interaction-title">Make it interactive</h2>
+        <p>A theme switcher changes the page colors, and an FAQ accordion lets readers open only the answers they want to explore.</p>
+        <p class="theme-status" role="status">Light theme is active.</p>
+      </section>
+    </div>
+    <section class="faq" aria-labelledby="faq-title">
+      <p class="eyebrow">A CLOSER LOOK</p>
+      <h2 id="faq-title">Frequently asked questions</h2>
+      <!-- Answers begin visible for readers without JavaScript. The script enhances them. -->
+      <article class="faq-item">
+        <h3><button class="faq-question" type="button" aria-controls="answer-theme" aria-expanded="true" disabled>How does the theme switcher work?<span aria-hidden="true">−</span></button></h3>
+        <div class="faq-answer" id="answer-theme"><p>JavaScript listens for a click and toggles a class on the page. CSS uses that class to change the colors. The button text and status message update too.</p></div>
+      </article>
+      <article class="faq-item">
+        <h3><button class="faq-question" type="button" aria-controls="answer-storage" aria-expanded="true" disabled>Will the website remember my theme?<span aria-hidden="true">−</span></button></h3>
+        <div class="faq-answer" id="answer-storage"><p>Yes, when browser storage is available. The site saves only your light or dark preference on this device. If storage is blocked, the button still works on the current page.</p></div>
+      </article>
+      <article class="faq-item">
+        <h3><button class="faq-question" type="button" aria-controls="answer-keyboard" aria-expanded="true" disabled>Can I use these features with a keyboard?<span aria-hidden="true">−</span></button></h3>
+        <div class="faq-answer" id="answer-keyboard"><p>Yes. Press Tab to move to a button, then Enter or Space to activate it. A visible focus outline shows which control is selected.</p></div>
+      </article>
+    </section>
+  </main>
+  <footer><p>My Website <span aria-hidden="true">/</span> Assignment 3 · HTML, CSS &amp; JavaScript</p></footer>
+</body>
+</html>
