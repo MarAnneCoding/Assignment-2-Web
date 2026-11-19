@@ -24,7 +24,7 @@ This project extends the local Assignment 2 artifact dated October 10, 2026, fro
 
 There is no form, so form validation and `preventDefault()` are not applicable.
 
-## Try it
+## Try the interactive features
 
 1. Open Home and click **Dark mode: off**. The palette and status should change.
 2. Open Projects & FAQ. With storage available, dark mode should persist; refresh to check again.
@@ -35,5 +35,3 @@ There is no form, so form validation and `preventDefault()` are not applicable.
 7. Disable JavaScript and reload: the page links and all FAQ answers remain readable.
 
 Storage restrictions do not break the switcher; they only prevent remembering the choice. Persistence across local `file:` pages depends on browser behavior; HTTP hosting provides a shared origin.
-
-Read `REFLECTION.txt`, understand the code, and follow your course's AI-use rules before submitting.
