@@ -74,6 +74,13 @@ section { padding: 28px; margin-bottom: 24px; background: var(--surface); border
 .faq-item { border-top: 1px solid var(--border); }
 .faq h3 { margin: 0; font-size: 17px; }
 .faq-question { display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; padding: 20px 0; border: 0; background: transparent; color: var(--text); text-align: left; font-weight: 700; }
+/* Highlight interactive FAQ buttons for mouse and keyboard users. */
+.faq-question:not(:disabled):hover,
+.faq-question:not(:disabled):focus-visible {
+  background: var(--tint);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 .faq-question span { font-size: 24px; color: var(--accent); }
 .faq-question:disabled { cursor: default; opacity: 1; }
 .faq-item.active .faq-question { color: var(--accent); }
